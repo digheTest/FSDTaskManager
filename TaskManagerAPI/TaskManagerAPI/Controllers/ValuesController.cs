@@ -50,12 +50,16 @@ namespace TaskManagerAPI.Controllers
             try
             {
                 TaskManagerRepository parentTaskRep = new TaskManagerRepository();
+
                 Parent_Task_Tbl parentTaskDb = new Parent_Task_Tbl
                 {
                     Parent_Task = parentTask.ParentTaskName,
                 };
+
                 string result = "{'ParentTaskID': " + parentTaskRep.CreateParentTask(parentTaskDb) + "}";
+
                 JObject json = JObject.Parse(result);
+
                 return Ok<JObject>(json);
 
             }
