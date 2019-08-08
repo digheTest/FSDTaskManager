@@ -75,7 +75,9 @@ namespace TaskManagerAPI.Controllers
         public IHttpActionResult ManageTask([FromBody]ParentTaskModel parentTask)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest("Not a valid data");
+            }
             try
             {
                 if (parentTask.ParentTaskID == 0)
