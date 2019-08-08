@@ -115,8 +115,11 @@ namespace TaskManagerAPI.Controllers
                 taskDb.End_Date = Convert.ToDateTime(taskModel.EndDate);
                 taskDb.Priority = taskModel.Priority;
                 taskDb.Is_Completed = Convert.ToBoolean(taskModel.IsCompleted);
+
                 string result = "{'TaskID': " + taskRep.EditTask(taskDb) + "}";
+
                 JObject json = JObject.Parse(result);
+
                 return Ok<JObject>(json);
             }
             else
