@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Task_ManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Parent_Task_Tbl">
+    <Key>
+      <PropertyRef Name="Parent_ID" />
+    </Key>
+    <Property Name="Parent_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Parent_Task" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Task_Tbl">
+    <Key>
+      <PropertyRef Name="Task_ID" />
+    </Key>
+    <Property Name="Task_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Parent_ID" Type="int" />
+    <Property Name="Task" Type="varchar" MaxLength="250" />
+    <Property Name="Start_Date" Type="datetime" />
+    <Property Name="End_Date" Type="datetime" />
+    <Property Name="Priority" Type="int" />
+    <Property Name="Is_Completed" Type="bit" />
+  </EntityType>
+  <Association Name="FK__Task_Tbl__Parent__25869641">
+    <End Role="Parent_Task_Tbl" Type="Self.Parent_Task_Tbl" Multiplicity="0..1" />
+    <End Role="Task_Tbl" Type="Self.Task_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent_Task_Tbl">
+        <PropertyRef Name="Parent_ID" />
+      </Principal>
+      <Dependent Role="Task_Tbl">
+        <PropertyRef Name="Parent_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Task_ManagerModelStoreContainer">
+    <EntitySet Name="Parent_Task_Tbl" EntityType="Self.Parent_Task_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Task_Tbl" EntityType="Self.Task_Tbl" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Task_Tbl__Parent__25869641" Association="Self.FK__Task_Tbl__Parent__25869641">
+      <End Role="Parent_Task_Tbl" EntitySet="Parent_Task_Tbl" />
+      <End Role="Task_Tbl" EntitySet="Task_Tbl" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

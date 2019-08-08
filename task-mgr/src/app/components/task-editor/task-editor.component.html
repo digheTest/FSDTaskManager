@@ -1,0 +1,89 @@
+<mat-card class="task-editor">
+  <mat-card-header>
+    <mat-card-title>{{ title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="taskForm" (submit)="processTaskForm(taskForm.value)">
+      <mat-form-field>
+        <mat-label>Task</mat-label>
+        <input matInput formControlName="taskName" />
+      </mat-form-field>
+
+      <br />
+
+      <mat-label>Priority</mat-label>
+      <mat-slider
+        min="0"
+        max="30"
+        step="1"
+        formControlName="priority"
+        thumbLabel
+        tickInterval="1"
+      ></mat-slider>
+
+      <br />
+
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Parent Task"
+          aria-label="Parent Task"
+          [matAutocomplete]="auto"
+          formControlName="parentTaskName"
+        />
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option
+            *ngFor="let parent of filteredParents | async"
+            [value]="parent.parentTaskName"
+          >
+            {{ parent.parentTaskName }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <br />
+
+      <mat-form-field>
+        <mat-label>Start Date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="startDatePicker"
+          formControlName="startDate"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="startDatePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #startDatePicker></mat-datepicker>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>End Date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="endDatePicker"
+          formControlName="endDate"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="endDatePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #endDatePicker></mat-datepicker>
+      </mat-form-field>
+      <br />
+      <mat-card-actions>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="primaryDisable"
+        >
+          {{ btnTxt }}
+        </button>
+
+        <button mat-raised-button type="reset" [disabled]="secondaryDisable">
+          Reset
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>
