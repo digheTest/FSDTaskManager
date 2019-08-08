@@ -25,12 +25,16 @@ namespace TaskManagerAPI.Controllers
         public IEnumerable<ParentTaskModel> Get()
         {
             TaskManagerRepository parentTaskRep = new TaskManagerRepository();
+
             var allParentTask = parentTaskRep.GetAllParentTasksRepo().ToList();
+
             var allChildTask = parentTaskRep.GetAllTaskRepo().ToList();
+
             Parent_Task_Tbl newParent = new Parent_Task_Tbl
             {
                 Task_Tbl = allChildTask,
             };
+
             allParentTask.Add(newParent);
 
             return allParentTask.Select(p => _modelFactory.GetParentTaskMoDel(p));
