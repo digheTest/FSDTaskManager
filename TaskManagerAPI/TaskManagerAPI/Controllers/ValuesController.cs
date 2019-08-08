@@ -44,7 +44,9 @@ namespace TaskManagerAPI.Controllers
         public IHttpActionResult CreateParentTask([FromBody]ParentTaskModel parentTask)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest("Not a valid data");
+            }
             try
             {
                 TaskManagerRepository parentTaskRep = new TaskManagerRepository();
