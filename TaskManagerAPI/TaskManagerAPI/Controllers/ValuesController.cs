@@ -89,7 +89,7 @@ namespace TaskManagerAPI.Controllers
                     CreateParentTask(parentTask);
                     return TaskDBChanges(parentTask.Task.FirstOrDefault());
                 }
-                else
+                else // else update parent task details
                 {
                     return TaskDBChanges(parentTask.Task.FirstOrDefault(), parentTask.ParentTaskID);
                 }
