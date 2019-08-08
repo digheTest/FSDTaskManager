@@ -80,11 +80,11 @@ namespace TaskManagerAPI.Controllers
             }
             try
             {
-                if (parentTask.ParentTaskID == 0)//Set 0 for no chnage in parent task
+                if (parentTask.ParentTaskID == 0)//if 0 for no chnage in parent task
                 {
                     return TaskDBChanges(parentTask.Task.FirstOrDefault(), 0);
                 }
-                else if (parentTask.ParentTaskID == -1)
+                else if (parentTask.ParentTaskID == -1)// if -1 to create new parenk task
                 {
                     CreateParentTask(parentTask);
                     return TaskDBChanges(parentTask.Task.FirstOrDefault());
