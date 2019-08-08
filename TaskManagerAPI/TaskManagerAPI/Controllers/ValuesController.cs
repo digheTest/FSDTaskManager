@@ -80,7 +80,7 @@ namespace TaskManagerAPI.Controllers
             }
             try
             {
-                if (parentTask.ParentTaskID == 0)
+                if (parentTask.ParentTaskID == 0)//Set 0 for no chnage in parent task
                 {
                     return TaskDBChanges(parentTask.Task.FirstOrDefault(), 0);
                 }
