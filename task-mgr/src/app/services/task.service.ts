@@ -8,7 +8,7 @@ import { ParentTask } from "../models/parent-task";
   providedIn: "root"
 })
 export class TaskService {
-  static BASE_URL = "https://localhost:44366/api/values";
+  static BASE_URL = "http://localhost:58376/api/values";
 
   tasks: Array<Task> = [];
   parentTasks: Array<ParentTask> = [];

@@ -8,3 +8,13 @@ C:\Users\Admin\documents\visual studio 2017\Projects\TaskManagerAPI\TaskManagerR
 C:\Users\Admin\documents\visual studio 2017\Projects\TaskManagerAPI\TaskManagerReference\obj\Debug\TaskManagerReference.csprojResolveAssemblyReference.cache
 C:\Users\Admin\documents\visual studio 2017\Projects\TaskManagerAPI\TaskManagerReference\obj\Debug\TaskManagerReference.dll
 C:\Users\Admin\documents\visual studio 2017\Projects\TaskManagerAPI\TaskManagerReference\obj\Debug\TaskManagerReference.pdb
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Debug\TaskManagerReference.dll.config
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Debug\TaskManagerReference.dll
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Debug\TaskManagerReference.pdb
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\obj\Debug\TaskManagerReference.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\obj\Debug\TaskManagerReference.dll
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\obj\Debug\TaskManagerReference.pdb

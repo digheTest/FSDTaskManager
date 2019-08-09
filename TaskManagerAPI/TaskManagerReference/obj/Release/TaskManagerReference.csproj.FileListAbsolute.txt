@@ -1,0 +1,9 @@
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Release\TaskManagerReference.dll.config
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Release\TaskManagerReference.dll
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Release\TaskManagerReference.pdb
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Release\EntityFramework.dll
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Release\EntityFramework.xml
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\obj\Release\TaskManagerReference.dll
+C:\Users\Admin\Documents\FSDProject\FSDTaskManager\TaskManagerAPI\TaskManagerReference\obj\Release\TaskManagerReference.pdb

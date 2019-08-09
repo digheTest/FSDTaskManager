@@ -20,7 +20,7 @@ namespace TaskManagerAPI
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{action}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new { controller = "Values", action = "Get", id = RouteParameter.Optional }
             );
         }
     }
